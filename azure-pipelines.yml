@@ -11,10 +11,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-
-- task: Maven@3
+- task: CmdLine@2
   inputs:
-    script:
-    javac lab2.java
+    script: |
+      javac lab2.java
+      
+      java lab2
 
-    java lab2 
